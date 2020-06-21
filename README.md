@@ -18,8 +18,11 @@ AuroraClusterEndPoint (outputs on the stack) : ref-aurora-stack-auroracluster-1h
 AuroraDBUsername : auradmin
 AuroraDBPassword : auradmin123
 
-5) Check the RDS data created by CloudFormation
-  rds -> database -> find out the aurora DB named with CloudFormation stack name
+5) Check the relations created by CloudFormation
+  - database : rds -> database -> find out the aurora DB named with CloudFormation stack name
+  - storage : s3 -> cf driven formation like cf-templateds-xxx 
+  - security group : EC2 -> security groups
+  - Network IF : EC2 -> Network & Security -> network interfaces
+  - VPC : VPC -> your VPCs -> check the overview
 
-6) check the S3 bucket created by CloudFormation
-  s3 -> cf driven formation like cf-templateds-xxx 
+### AWS CloudFormation
